@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Entity
 @Table(name = "resumes")
@@ -33,7 +32,7 @@ public class Resume extends BaseEntity {
     private String company;
 
     @Lob
-    @Column(columnDefinition = "LONGTEXT")
+    @Column(columnDefinition = "TEXT")
     private String jobDescription;
 
     @Column(nullable = false, length = 255)
@@ -59,7 +58,7 @@ public class Resume extends BaseEntity {
     private Integer atsScore;
 
     @Lob
-    @Column(columnDefinition = "LONGTEXT")
+    @Column(columnDefinition = "TEXT")
     private String extractedText;
 
     @Column(nullable = false)
