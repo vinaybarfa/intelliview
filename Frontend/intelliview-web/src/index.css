@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --iv-background: #07050d;
+  --iv-surface: #120c1e;
+  --iv-surface-elevated: #1a1028;
+  --iv-border: rgba(196, 181, 253, 0.15);
+  --iv-primary: #8b5cf6;
+  --iv-primary-hover: #a78bfa;
+  --iv-text: #f8fafc;
+  --iv-muted: #a6a1af;
+  --iv-success: #8fe4b7;
+  --iv-warning: #f3b27b;
+  --iv-error: #f2b1cb;
+  font-family: "Manrope", Arial, sans-serif;
+  color: var(--iv-text);
+  background: var(--iv-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+html[data-theme="light"] {
+  --iv-background: #faf9fc;
+  --iv-surface: #ffffff;
+  --iv-surface-elevated: #f5f1fb;
+  --iv-border: rgba(91, 55, 145, 0.18);
+  --iv-text: #251b31;
+  --iv-muted: #6d6276;
+  --iv-success: #18794e;
+  --iv-warning: #aa5c14;
+  --iv-error: #b42354;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  background: var(--iv-background);
+  scroll-behavior: auto;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--iv-background);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--iv-primary-hover);
+  outline-offset: 3px;
+}
+#root {
+  min-height: 100vh;
+  overflow: clip;
+}
